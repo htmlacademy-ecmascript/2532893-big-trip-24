@@ -1,7 +1,7 @@
 # Проект «Большое путешествие»
 
 * Студент: [Yuriy Andreyev](https://up.htmlacademy.ru/ecmascript/24/user/2532893).
-* Наставник: `Неизвестно`.
+* Наставник: [Yulia Volkova] (https://htmlacademy.ru/profile/julie_volkova).
 
 ---
 
