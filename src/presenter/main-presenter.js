@@ -1,6 +1,4 @@
 
-import Filters from '../view/FiltersView.js';
-import Sort from '../view/SortView.js';
 import CreateForm from '../view/CreateFormView.js';
 import EditForm from '../view/EditFormView.js';
 import Point from '../view/PointView.js';
