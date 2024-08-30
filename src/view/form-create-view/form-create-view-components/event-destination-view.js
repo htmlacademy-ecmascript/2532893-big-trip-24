@@ -1,5 +1,4 @@
 import { createElement } from "../../../render.js";
-import { capitalizeFirstLetter } from "../../../utils/utils.js";
 
 const EVENT_DESTINATION_POINTS = ['Amsterdam', 'Geneva', 'Chamonix'];
 

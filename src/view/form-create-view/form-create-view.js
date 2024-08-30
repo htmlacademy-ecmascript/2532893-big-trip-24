@@ -1,9 +1,11 @@
 import { createElement } from '../../render.js'
 import EventTypeView from './form-create-view-components/event-type-view.js'
 import EventDestinationView from './form-create-view-components/event-destination-view.js'
+import EventTimepointView from './form-create-view-components/event-timepoint-view.js'
 
 const createEventType = new EventTypeView().getTemplate()
 const createEventDestination = new EventDestinationView().getTemplate()
+const createEventTimepoint = new EventTimepointView().getTemplate()
 
 function createFormCreateTemplate() {
   return `
@@ -13,13 +15,7 @@ function createFormCreateTemplate() {
 
                   ${createEventDestination}
 
-                  <div class="event__field-group  event__field-group--time">
-                    <label class="visually-hidden" for="event-start-time-1">From</label>
-                    <input class="event__input  event__input--time" id="event-start-time-1" type="text" name="event-start-time" value="19/03/19 00:00">
-                    &mdash;
-                    <label class="visually-hidden" for="event-end-time-1">To</label>
-                    <input class="event__input  event__input--time" id="event-end-time-1" type="text" name="event-end-time" value="19/03/19 00:00">
-                  </div>
+                  ${createEventTimepoint}
 
                   <div class="event__field-group  event__field-group--price">
                     <label class="event__label" for="event-price-1">
