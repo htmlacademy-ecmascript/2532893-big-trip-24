@@ -1,5 +1,5 @@
-import FiltersView from './view/filter-view.js';
-import SortView from './view/SortView.js';
+import FiltersView from './view/filter-view/filter-view.js';
+import SortView from './view/sort-view/sort-view.js';
 import MainPresenter from './presenter/main-presenter.js';
 
 import { render, RenderPosition } from './render.js';
