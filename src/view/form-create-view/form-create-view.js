@@ -1,37 +1,17 @@
-import { createElement, render, RenderPosition } from '../../render.js'
+import { createElement } from '../../render.js'
 import EventTypeView from './form-create-view-components/event-type-view.js'
+import EventDestinationView from './form-create-view-components/event-destination-view.js'
 
-const createEventType = new EventTypeView().getTemplate();
+const createEventType = new EventTypeView().getTemplate()
+const createEventDestination = new EventDestinationView().getTemplate()
 
 function createFormCreateTemplate() {
   return `
               <form class="event event--edit" action="#" method="post">
                 <header class="event__header">
-                  <div class="event__type-wrapper">
-                    <label class="event__type  event__type-btn" for="event-type-toggle-1">
-                      <span class="visually-hidden">Choose event type</span>
-                      <img class="event__type-icon" width="17" height="17" src="img/icons/flight.png" alt="Event type icon">
-                    </label>
-                    <input class="event__type-toggle  visually-hidden" id="event-type-toggle-1" type="checkbox">
-                    <div class="event__type-list">
-                      <fieldset class="event__type-group">
-                        <legend class="visually-hidden">Event type</legend>
-                        ${createEventType}
-                      </fieldset>
-                    </div>
-                  </div>
+                  ${createEventType}
 
-                  <div class="event__field-group  event__field-group--destination">
-                    <label class="event__label  event__type-output" for="event-destination-1">
-                      Flight
-                    </label>
-                    <input class="event__input  event__input--destination" id="event-destination-1" type="text" name="event-destination" value="Geneva" list="destination-list-1">
-                    <datalist id="destination-list-1">
-                      <option value="Amsterdam"></option>
-                      <option value="Geneva"></option>
-                      <option value="Chamonix"></option>
-                    </datalist>
-                  </div>
+                  ${createEventDestination}
 
                   <div class="event__field-group  event__field-group--time">
                     <label class="visually-hidden" for="event-start-time-1">From</label>
