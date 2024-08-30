@@ -7,7 +7,7 @@ function createResetButtonTemplate() {
 }
 
 
-export default class ResetButtonView {
+export default class EventResetButtonView {
   getTemplate() {
     return createResetButtonTemplate();
   }

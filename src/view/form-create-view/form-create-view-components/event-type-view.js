@@ -14,13 +14,7 @@ function createEventTypeTemplate(eventType) {
 }
 
 function createAllEventsTypesTemplate() {
-
-  const allEvents = []
-
-  for (const eventType of EVENT_TYPES) {
-    allEvents.push(createEventTypeTemplate(eventType))
-  }
-  return allEvents.join('');
+  return EVENT_TYPES.map((type) => createEventTypeTemplate(type)) .join('');
 }
 
 function createAllEventsWrapperTemplate() {

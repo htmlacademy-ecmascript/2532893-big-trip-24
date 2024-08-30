@@ -1,20 +1,15 @@
-import { createElement } from "../../../render.js";
+import { createElement } from '../../../render.js';
 
 const EVENT_DESTINATION_POINTS = ['Amsterdam', 'Geneva', 'Chamonix'];
 
 function createDestinationTemplate(point) {
   return `
     <option value=${point}></option>
-  `
+  `;
 }
 
 function createDestinationListTemplate() {
-  const destinations = []
-
-  for (const point of EVENT_DESTINATION_POINTS) {
-    destinations.push(createDestinationTemplate(point))
-  }
-  return destinations.join('');
+  return EVENT_DESTINATION_POINTS.map((point) => createDestinationTemplate(point))
 }
 
 function createDestinationInputTemplate() {
@@ -28,17 +23,17 @@ function createDestinationInputTemplate() {
                ${createDestinationListTemplate()}
             </datalist>
         </div>
-  `
+  `;
 }
 
 export default class EventDestinationView {
   getTemplate() {
-    return createDestinationInputTemplate()
+    return createDestinationInputTemplate();
   }
 
   getElement() {
     if (!this.element) {
-      this.element = createElement(this.getTemplate())
+      this.element = createElement(this.getTemplate());
     }
     return this.element;
   }

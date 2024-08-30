@@ -7,7 +7,7 @@ function createSaveButtonTemplate() {
 }
 
 
-export default class SaveButtonView {
+export default class EventSaveButtonView {
   getTemplate() {
     return createSaveButtonTemplate();
   }
