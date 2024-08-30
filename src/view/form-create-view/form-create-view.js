@@ -1,7 +1,7 @@
-import { createElement } from '../../render.js'
-import EventTypeView from './event-type-view.js'
+import { createElement, render, RenderPosition } from '../../render.js'
+import EventTypeView from './form-create-view-components/event-type-view.js'
 
-const createEventType = new EventTypeView();
+const createEventType = new EventTypeView().getTemplate();
 
 function createFormCreateTemplate() {
   return `

@@ -3,5 +3,3 @@ function capitalizeFirstLetter(string) {
 }
 
 export { capitalizeFirstLetter };
-
-console.log(capitalizeFirstLetter('hello'));
