@@ -1,4 +1,4 @@
-import { RenderPosition, createElement, render } from "../../render.js";
+import { createElement } from "../../render.js";
 import { capitalizeFirstLetter } from "../../utils/utils.js";
 
 const EVENT_TYPES = ['taxi', 'bus', 'train', 'ship', 'drive', 'flight', 'check-in', 'sightseeing', 'restaurant']
