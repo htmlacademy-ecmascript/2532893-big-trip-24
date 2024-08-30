@@ -1,4 +1,4 @@
-import { createElement } from "../../../render.js";
+import { createElement } from '../../../render.js';
 
 function createTimepointInputTemplate() {
   return `
@@ -9,18 +9,18 @@ function createTimepointInputTemplate() {
                     <label class="visually-hidden" for="event-end-time-1">To</label>
                     <input class="event__input  event__input--time" id="event-end-time-1" type="text" name="event-end-time" value="19/03/19 00:00">
                   </div>
-  `
+  `;
 }
 
 
 export default class EventTimepointView {
   getTemplate() {
-    return createTimepointInputTemplate()
+    return createTimepointInputTemplate();
   }
 
   getElement() {
     if (!this.element) {
-      this.element = createElement(this.getTemplate())
+      this.element = createElement(this.getTemplate());
     }
     return this.element;
   }

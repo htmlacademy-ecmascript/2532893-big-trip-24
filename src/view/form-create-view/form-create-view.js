@@ -1,33 +1,29 @@
-import { createElement } from '../../render.js'
-import EventTypeView from './form-create-view-components/event-type-view.js'
-import EventDestinationView from './form-create-view-components/event-destination-view.js'
-import EventTimepointView from './form-create-view-components/event-timepoint-view.js'
+import { createElement } from '../../render.js';
+import EventTypeView from './form-create-view-components/event-type-view.js';
+import EventDestinationView from './form-create-view-components/event-destination-view.js';
+import EventTimepointView from './form-create-view-components/event-timepoint-view.js';
+import EventPriceView from './form-create-view-components/event-price-view.js';
+import EventSaveButtonView from './form-create-view-components/event-save-button-view.js';
+import EventResetButtonView from './form-create-view-components/event-reset-button-view.js';
 
-const createEventType = new EventTypeView().getTemplate()
-const createEventDestination = new EventDestinationView().getTemplate()
-const createEventTimepoint = new EventTimepointView().getTemplate()
+const createEventType = new EventTypeView().getTemplate();
+const createEventDestination = new EventDestinationView().getTemplate();
+const createEventTimepoint = new EventTimepointView().getTemplate();
+const createEventPrice = new EventPriceView().getTemplate();
+const createSaveButton = new EventSaveButtonView().getTemplate();
+const createResetButton = new EventResetButtonView().getTemplate();
 
 function createFormCreateTemplate() {
   return `
-              <form class="event event--edit" action="#" method="post">
-                <header class="event__header">
-                  ${createEventType}
-
-                  ${createEventDestination}
-
-                  ${createEventTimepoint}
-
-                  <div class="event__field-group  event__field-group--price">
-                    <label class="event__label" for="event-price-1">
-                      <span class="visually-hidden">Price</span>
-                      &euro;
-                    </label>
-                    <input class="event__input  event__input--price" id="event-price-1" type="text" name="event-price" value="">
-                  </div>
-
-                  <button class="event__save-btn  btn  btn--blue" type="submit">Save</button>
-                  <button class="event__reset-btn" type="reset">Cancel</button>
-                </header>
+    <form class="event event--edit" action="#" method="post">
+      <header class="event__header">
+        ${createEventType}
+        ${createEventDestination}
+        ${createEventTimepoint}
+        ${createEventPrice}
+        ${createSaveButton}
+        ${createResetButton}
+      </header>
                 <section class="event__details">
                   <section class="event__section  event__section--offers">
                     <h3 class="event__section-title  event__section-title--offers">Offers</h3>
@@ -101,12 +97,12 @@ function createFormCreateTemplate() {
 
 export default class FormCreateView {
   getTemplate() {
-    return createFormCreateTemplate()
+    return createFormCreateTemplate();
   }
 
   getElement() {
     if (!this.element) {
-      this.element = createElement(this.getTemplate())
+      this.element = createElement(this.getTemplate());
     }
     return this.element;
   }
