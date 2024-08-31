@@ -1,8 +1,9 @@
 import { createElement } from '../../../render.js';
+import { buttonsTitles } from '../../../utils/utils.js'
 
 function createResetButtonTemplate() {
   return `
-    <button class="event__reset-btn" type="reset">Cancel</button>
+    <button class="event__reset-btn" type="reset">${buttonsTitles.cancel}</button>
   `;
 }
 
