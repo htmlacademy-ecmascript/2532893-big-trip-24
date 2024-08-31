@@ -12,3 +12,6 @@ const mainPresenter = new MainPresenter({container: tripEvents});
 render(new FiltersView(), tripControlsFilters, RenderPosition.BEFOREEND);
 render(new SortView(), tripEvents, RenderPosition.BEFOREEND);
 mainPresenter.init();
+
+
+import './view/form-create-view/form-create-view-components/event-offer-selector-view.js';
