@@ -1,11 +1,11 @@
 import { createElement } from '../../render.js';
 import FilterItemsView from './filter-view-components/filter-items-view.js';
 
-const createAllFiltersTemplate = new FilterItemsView().getTemplate();
+const createFiltersItems = new FilterItemsView().getTemplate();
 
 function createFiltersTemplate() {
   return `<form class="trip-filters" action="#" method="get">
-                ${createAllFiltersTemplate}
+                ${createFiltersItems}
 
                 <button class="visually-hidden" type="submit">Accept filter</button>
               </form>`;
