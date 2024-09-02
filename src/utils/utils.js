@@ -5,7 +5,10 @@ function capitalizeFirstLetter(string) {
 const buttonsTitles = {
   'delete': 'Delete',
   'cancel': 'Cancel',
-}
+};
 
+function getRandomArrayElement(items) {
+  return items[Math.floor(Math.random() * items.length)];
+};
 
-export { capitalizeFirstLetter, buttonsTitles };
+export { capitalizeFirstLetter, buttonsTitles, getRandomArrayElement };
