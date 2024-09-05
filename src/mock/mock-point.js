@@ -1,6 +1,8 @@
 import { destinationPoints, destinationPointsDescriptionsList, destinationPointsImagesURLsList, destinationPointsImagesDescriptionsList, offerTitles, EventType } from '../utils/constants.js';
 import { getRandomArrayElement, generateRandomDate } from '../utils/utils.js';
 
+
+
 // Offers
 function createOffersIDsList() {
   const offersIDsListResult = [];
@@ -90,7 +92,7 @@ function createPoints() {
         'base_price': offersPriceList[i] * 100,
         'date_from': generateRandomDate(new Date(2024, 10, 1), new Date(2024, 10, 31)),
         'date_to': generateRandomDate(new Date(2024, 11, 1), new Date(2024, 11, 30)),
-        'destination': getRandomArrayElement(destinationPoints),
+        'destination': getRandomArrayElement(points).id,
         'is_favorite': true,
         'offers': [
           offers[i]
@@ -102,11 +104,8 @@ function createPoints() {
 }
 
 const eventPoints = createPoints();
-
-
-console.log(offers);
-console.log(points);
 console.log(eventPoints);
-// Points
+
+export { eventPoints };
 
 
