@@ -1,7 +1,7 @@
 import { createElement } from '../../render.js';
-import FilterItemsView from './filter-view-components/filter-items-view.js';
+import createAllFilterTypesTemplate from './filter-view-components/filter-items-view.js';
 
-const createFiltersItems = new FilterItemsView().getTemplate();
+const createFiltersItems = createAllFilterTypesTemplate();
 
 function createFiltersTemplate() {
   return `<form class="trip-filters" action="#" method="get">

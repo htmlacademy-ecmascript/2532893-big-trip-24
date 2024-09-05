@@ -1,5 +1,4 @@
 import { capitalizeFirstLetter } from '../../../utils/utils.js';
-import { createElement } from '../../../render.js';
 
 const TYPES_OF_FILTER = ['everything', 'future', 'present', 'past'];
 
@@ -12,23 +11,6 @@ function createFilterTypeTemplate(filterType) {
 
 }
 
-function createAllFilterTypesTemplate() {
+export default function createAllFilterTypesTemplate() {
   return TYPES_OF_FILTER.map(createFilterTypeTemplate).join('');
-}
-
-export default class FilterItemsView {
-  getTemplate() {
-    return createAllFilterTypesTemplate();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
-  }
 }
