@@ -2,7 +2,7 @@ import { createElement } from '../../render.js';
 import EventTypeView from './form-create-view-components/event-type-view.js';
 import createDestinationInputTemplate from './form-create-view-components/event-destination-view.js';
 import EventTimepointView from './form-create-view-components/event-timepoint-view.js';
-import EventPriceView from './form-create-view-components/event-price-view.js';
+import createPriceInputTemplate from './form-create-view-components/event-price-view.js';
 import EventSaveButtonView from './form-create-view-components/event-save-button-view.js';
 import EventResetButtonView from './form-create-view-components/event-reset-button-view.js';
 import createAllOfferSelectorsTemplate from './form-create-view-components/event-offer-selector-view.js';
@@ -10,10 +10,10 @@ import createAllOfferSelectorsTemplate from './form-create-view-components/event
 const createEventType = new EventTypeView().getTemplate();
 const createEventDestination = createDestinationInputTemplate();
 const createEventTimepoint = new EventTimepointView().getTemplate();
-const createEventPrice = new EventPriceView().getTemplate();
+const createEventPrice = createPriceInputTemplate();
 const createSaveButton = new EventSaveButtonView().getTemplate();
 const createResetButton = new EventResetButtonView().getTemplate();
-const createOfferSelector = new createAllOfferSelectorsTemplate();
+const createOfferSelector = createAllOfferSelectorsTemplate();
 
 function createFormCreateTemplate() {
   return `
