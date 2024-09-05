@@ -1,7 +1,7 @@
 import { createElement } from '../../render.js';
-import { SortItemsView } from './sort-view-components/sort-items-view.js';
+import { createAllSortTypesTemplate } from './sort-view-components/sort-items-view.js';
 
-const createSortItems = new SortItemsView().getTemplate();
+const createSortItems = createAllSortTypesTemplate();
 
 function createSortTemplate() {
   return ` <form class="trip-events__trip-sort  trip-sort" action="#" method="get">
