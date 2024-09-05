@@ -2,7 +2,6 @@ import { destinationPoints, destinationPointsDescriptionsList, destinationPoints
 import { getRandomArrayElement, generateRandomDate } from '../utils/utils.js';
 
 
-
 // Offers
 function createOffersIDsList() {
   const offersIDsListResult = [];
