@@ -44,12 +44,12 @@ function createPointTemplate() {
 
 export default class PointView {
   getTemplate() {
-    return createPointTemplate()
+    return createPointTemplate();
   }
 
   getElement() {
     if (!this.element) {
-      this.element = createElement(this.getTemplate())
+      this.element = createElement(this.getTemplate());
     }
     return this.element;
   }

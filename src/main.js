@@ -14,4 +14,4 @@ render(new SortView(), tripEvents, RenderPosition.BEFOREEND);
 mainPresenter.init();
 
 
-import './view/form-create-view/form-create-view-components/event-offer-selector-view.js';
+import './mock/mock-point.js';
