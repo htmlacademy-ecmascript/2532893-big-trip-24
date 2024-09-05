@@ -1,4 +1,4 @@
-import { createElement } from '../../../render.js';
+
 import { capitalizeFirstLetter } from '../../../utils/utils.js';
 
 const EVENT_TYPES = ['taxi', 'bus', 'train', 'ship', 'drive', 'flight', 'check-in', 'sightseeing', 'restaurant'];
@@ -17,7 +17,7 @@ function createAllEventsTypesTemplate() {
   return EVENT_TYPES.map((type) => createEventTypeTemplate(type)) .join('');
 }
 
-function createAllEventsWrapperTemplate() {
+export default function createAllEventsWrapperTemplate() {
   return `
     <div class="event__type-wrapper">
         <label class="event__type  event__type-btn" for="event-type-toggle-1">
@@ -35,22 +35,3 @@ function createAllEventsWrapperTemplate() {
   `;
 
 }
-
-export default class EventTypeView {
-  getTemplate() {
-    return createAllEventsWrapperTemplate();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
-  }
-}
-
-

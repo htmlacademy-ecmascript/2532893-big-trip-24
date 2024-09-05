@@ -1,17 +1,17 @@
 import { createElement } from '../../render.js';
-import EventTypeView from './form-create-view-components/event-type-view.js';
+import createAllEventsWrapperTemplate from './form-create-view-components/event-type-view.js';
 import createDestinationInputTemplate from './form-create-view-components/event-destination-view.js';
-import EventTimepointView from './form-create-view-components/event-timepoint-view.js';
+import createTimepointInputTemplate from './form-create-view-components/event-timepoint-view.js';
 import createPriceInputTemplate from './form-create-view-components/event-price-view.js';
-import EventSaveButtonView from './form-create-view-components/event-save-button-view.js';
+import createSaveButtonTemplate from './form-create-view-components/event-save-button-view.js';
 import createResetButtonTemplate from './form-create-view-components/event-reset-button-view.js';
 import createAllOfferSelectorsTemplate from './form-create-view-components/event-offer-selector-view.js';
 
-const createEventType = new EventTypeView().getTemplate();
+const createEventType = createAllEventsWrapperTemplate();
 const createEventDestination = createDestinationInputTemplate();
-const createEventTimepoint = new EventTimepointView().getTemplate();
+const createEventTimepoint = createTimepointInputTemplate();
 const createEventPrice = createPriceInputTemplate();
-const createSaveButton = new EventSaveButtonView().getTemplate();
+const createSaveButton = createSaveButtonTemplate();
 const createResetButton = createResetButtonTemplate();
 const createOfferSelector = createAllOfferSelectorsTemplate();
 
