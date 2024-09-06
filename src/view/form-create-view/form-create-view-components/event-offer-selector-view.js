@@ -1,4 +1,3 @@
-import { createElement } from '../../../render.js';
 
 const OFFER_TITLES = ['Add luggage', 'Switch to comfort class', 'Add meal', 'Choose seats', 'Travel by train'];
 
@@ -22,23 +21,7 @@ function createOfferSelectorTemplate(offer, value, title) {
     </div>`;
 }
 
-function createAllOfferSelectorsTemplate() {
+export default function createAllOfferSelectorsTemplate() {
   return OFFER_TITLES.map((item, index) => createOfferSelectorTemplate(Object.keys(offers)[index], Object.values(offers)[index], item));
 }
 
-export default class EventOfferSelectorView{
-  getTemplate() {
-    return createAllOfferSelectorsTemplate().join('');
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
-  }
-};
