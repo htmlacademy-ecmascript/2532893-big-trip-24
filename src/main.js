@@ -6,7 +6,8 @@ import { PointsModel } from '../src/model/points-model';
 
 const tripControlsFilters = document.querySelector('.trip-controls__filters');
 const tripEvents = document.querySelector('.trip-events');
-const mainPresenter = new MainPresenter({ container: tripEvents, PointsModel });
+const pointsModel = new PointsModel();
+const mainPresenter = new MainPresenter({ container: tripEvents, pointsModel });
 
 
 render(new FiltersView(), tripControlsFilters, RenderPosition.BEFOREEND);
