@@ -21,4 +21,4 @@ function createAllSortTypesTemplate() {
   return TYPES_OF_SORT.map(createSortTypeTemplate).join('');
 }
 
-export { createAllSortTypesTemplate }
+export { createAllSortTypesTemplate };
