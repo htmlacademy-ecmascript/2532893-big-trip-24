@@ -1,4 +1,3 @@
-
 const OFFER_TITLES = ['Add luggage', 'Switch to comfort class', 'Add meal', 'Choose seats', 'Travel by train'];
 
 const offers = {

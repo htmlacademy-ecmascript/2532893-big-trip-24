@@ -1,5 +1,3 @@
-
-
 export default function createPriceInputTemplate() {
   return `
   <div class="event__field-group  event__field-group--price">

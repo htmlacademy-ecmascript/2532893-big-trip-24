@@ -1,4 +1,3 @@
-
 const EVENT_DESTINATION_POINTS = ['Amsterdam', 'Geneva', 'Chamonix'];
 
 function createDestinationTemplate(point) {

@@ -1,5 +1,3 @@
-
-
 export default function createTimepointInputTemplate() {
   return `
   <div class="event__field-group  event__field-group--time">

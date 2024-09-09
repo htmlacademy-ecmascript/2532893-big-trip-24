@@ -1,11 +1,11 @@
-function capitalizeFirstLetter(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+function capitalizeFirstLetter(value) {
+  return value.charAt(0).toUpperCase() + value.slice(1);
 }
 
-const ButtonsTitles = {
+const ButtonTitle = {
   'DELETE': 'Delete',
   'CANCEL': 'Cancel',
 };
 
 
-export { capitalizeFirstLetter, ButtonsTitles };
+export { capitalizeFirstLetter, ButtonTitle };
