@@ -15,7 +15,7 @@ export default class MainPresenter {
     render(new FormEditView(), this.container, RenderPosition.BEFOREEND);
     render(new FormCreateView(), this.container, RenderPosition.BEFOREEND);
     for (let i = 0; i < this.points.length; i++) {
-      render(new PointView({ task: this.points[i] }), this.container.getElement());
+      render(new PointView({ point: this.points[i] }), this.container.getElement());
     }
   }
 }

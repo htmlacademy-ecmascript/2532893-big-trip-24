@@ -1,5 +1,5 @@
 import { destinationPoints, destinationPointsDescriptionsList, destinationPointsImagesURLsList, destinationPointsImagesDescriptionsList, offerTitles, EventType } from '../utils/constants.js';
-import { getRandomArrayElement, generateRandomDate } from '../utils/utils.js';
+import { generateRandomDate } from '../utils/utils.js';
 
 
 // Offers
@@ -50,7 +50,7 @@ function createDestinationPoints() {
   for (let i = 0; i < destinationPointsIDsList.length; i++) {
     pointsList.push(
       {
-        'id': destinationPointsIDsList[i],
+        'id': String(destinationPointsIDsList[i]),
         'description': destinationPointsDescriptionsList[i],
         'name': destinationPoints[i],
         'pictures': [
@@ -87,24 +87,24 @@ function createPoints() {
   for (let i = 0; i < pointsIDsList.length; i++) {
     pointsList.push(
       {
-        'id': pointsIDsList[i],
-        'base_price': offersPriceList[i] * 100,
+        'id': String(pointsIDsList[i]),
+        'basePrice': offersPriceList[i] * 100,
         'date_from': generateRandomDate(new Date(2024, 10, 1), new Date(2024, 10, 31)),
         'date_to': generateRandomDate(new Date(2024, 11, 1), new Date(2024, 11, 30)),
-        'destination': getRandomArrayElement(points).id,
+        'destination': String(destinationPointsIDsList[i]),
         'is_favorite': true,
         'offers': [
           offers[i]
         ],
-        'type': Object.keys(EventType)[Math.floor(Math.random() * Object.keys(EventType).length)],
+        'type': Object.values(EventType)[Math.floor(Math.random() * Object.values(EventType).length)],
       });
   }
   return pointsList;
 }
 
 const eventPoints = createPoints();
-console.log(eventPoints);
 
-export { eventPoints };
+
+export { eventPoints, points, offers };
 
 
