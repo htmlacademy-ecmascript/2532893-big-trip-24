@@ -44,6 +44,10 @@ function humanizeEventDate(eventDate) {
   return eventDate ? dayjs(eventDate).format('DD/MM/YYYY hh:mm') : '';
 }
 
+function humanizeDateAttribute(eventDate) {
+  return eventDate ? dayjs(eventDate).format('YYYY-MM-DDThh:mm') : '';
+}
+
 function getTimeDiff(startDate, endDate) {
   const difference = endDate - startDate;
   const seconds = Math.floor(difference / SEC);
@@ -76,4 +80,4 @@ function getDuration({ difference, days, hours, minutes }) {
   }
 }
 
-export { capitalizeFirstLetter, ButtonsTitles, getRandomNum, getUniqueID, getRandomArrayElement, generateRandomDate, getTimeDiff, getDuration, humanizeEventDate };
+export { capitalizeFirstLetter, ButtonsTitles, getRandomNum, getUniqueID, getRandomArrayElement, generateRandomDate, getTimeDiff, getDuration, humanizeEventDate, humanizeDateAttribute };

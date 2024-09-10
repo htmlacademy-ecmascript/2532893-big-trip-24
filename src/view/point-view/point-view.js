@@ -1,5 +1,5 @@
 import { createElement } from '../../render.js';
-import { capitalizeFirstLetter, getRandomArrayElement, getTimeDiff, getDuration, humanizeEventDate } from '../../utils/utils.js';
+import { capitalizeFirstLetter, getRandomArrayElement, getTimeDiff, getDuration, humanizeEventDate, humanizeDateAttribute } from '../../utils/utils.js';
 import { points, offers } from '../../mock/mock-point.js';
 import { eventPoints } from '../../mock/mock-point.js';
 
@@ -29,9 +29,9 @@ function createPointTemplate(eventPoint) {
       <h3 class="event__title">${eventType} ${destinationPointName(eventPoint)}</h3>
       <div class="event__schedule">
         <p class="event__time">
-          <time class="event__start-time" datetime="2019-03-18T10:30">10:30</time>
+          <time class="event__start-time" datetime="${humanizeDateAttribute(dateFrom)}">10:30</time>
           &mdash;
-          <time class="event__end-time" datetime="2019-03-18T11:00"</time>
+          <time class="event__end-time" datetime="${humanizeDateAttribute(dateTo)}">11:00</time>
         </p>
         <p class="event__duration">${eventDuration}</p>
       </div>
