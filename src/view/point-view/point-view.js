@@ -1,7 +1,7 @@
 import { createElement } from '../../render.js';
-import { capitalizeFirstLetter } from '../../utils/utils.js';
+import { capitalizeFirstLetter, getRandomArrayElement, getTimeDiff, getDuration, humanizeEventDate } from '../../utils/utils.js';
 import { points, offers } from '../../mock/mock-point.js';
-import { getRandomArrayElement } from '../../utils/utils.js';
+import { eventPoints } from '../../mock/mock-point.js';
 
 
 const destinationPointName = (point) => {
@@ -9,12 +9,16 @@ const destinationPointName = (point) => {
 
   return destinationPoint.name;
 };
+console.log(createPointTemplate(eventPoints[0]));
 
 function createPointTemplate(eventPoint) {
-  const { type, basePrice } = eventPoint;
+  const { type, basePrice, date_from: dateFrom, date_to: dateTo } = eventPoint;
 
   const eventType = capitalizeFirstLetter(type);
   const offer = getRandomArrayElement(offers);
+  const eventTimeDiff = getTimeDiff(dateFrom, dateTo);
+  const eventDuration = getDuration(eventTimeDiff);
+
   return`
   <li class="trip-events__item">
     <div class="event">
@@ -27,9 +31,9 @@ function createPointTemplate(eventPoint) {
         <p class="event__time">
           <time class="event__start-time" datetime="2019-03-18T10:30">10:30</time>
           &mdash;
-          <time class="event__end-time" datetime="2019-03-18T11:00">11:00</time>
+          <time class="event__end-time" datetime="2019-03-18T11:00"</time>
         </p>
-        <p class="event__duration">30M</p>
+        <p class="event__duration">${eventDuration}</p>
       </div>
       <p class="event__price">
         &euro;&nbsp;<span class="event__price-value">${basePrice}</span>

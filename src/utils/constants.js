@@ -31,5 +31,21 @@ const EventType = {
   RESTAURANT: 'restaurant'
 };
 
+const DurationUnit = {
+  MINUTES: 'M',
+  HOURS: 'H',
+  DAYS: 'D'
+};
 
-export { destinationPoints, destinationPointsDescriptionsList, destinationPointsImagesURLsList, destinationPointsImagesDescriptionsList, offerTitles, EventType };
+const DurationUnitConversion = {
+  MILLISECONDS_TO_SECONDS: 1000,
+  SECONDS_TO_MINUTES: 60,
+  MINUTES_TO_HOURS: 60,
+  HOURS_TO_DAYS: 24,
+  MILLISECONDS_TO_HOURS: 60 * 60 * 1000,
+  MILLISECONDS_TO_DAYS: 24 * 60 * 60 * 1000,
+  DAYS_TO_MONTHS: 30,
+};
+
+
+export { destinationPoints, destinationPointsDescriptionsList, destinationPointsImagesURLsList, destinationPointsImagesDescriptionsList, offerTitles, EventType, DurationUnitConversion, DurationUnit };
