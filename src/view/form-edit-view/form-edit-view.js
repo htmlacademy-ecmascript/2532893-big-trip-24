@@ -7,6 +7,7 @@ import createSaveButtonTemplate from '../form-create-view/form-create-view-compo
 import createEditResetButtonTemplate from '../form-edit-view/event-edit-reset-button-view.js';
 import createAllOfferSelectorsTemplate from '../form-create-view/form-create-view-components/event-offer-selector-view.js';
 
+
 const createEventType = createAllEventsWrapperTemplate();
 const createEventDestination = createDestinationInputTemplate();
 const createEventTimepoint = createTimepointInputTemplate();

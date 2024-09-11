@@ -1,4 +1,16 @@
+<<<<<<< HEAD
+=======
+import { capitalizeFirstLetter, getRandomArrayElement } from '../../../utils/utils.js';
+import { points, offers } from '../../../mock/mock-point.js';
+import dayjs from 'dayjs';
+
+>>>>>>> m2t1t
 const EVENT_DESTINATION_POINTS = ['Amsterdam', 'Geneva', 'Chamonix'];
+
+
+
+// console.log(date1, date2);
+
 
 function createDestinationTemplate(point) {
   return `
