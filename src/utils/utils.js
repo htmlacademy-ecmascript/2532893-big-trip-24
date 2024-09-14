@@ -67,17 +67,13 @@ function getDuration({ difference, days, hours, minutes }) {
   switch (true) {
     case (difference < MHOURS):
       return `${minutes}${MINS}`;
-      break;
     case (difference >= MHOURS && difference < MDAYS):
       return `${hours}${HRS} ${minutes}${MINS}`;
-      break;
     case (difference >= MDAYS):
       return `${days}${DAY} ${hours}${HRS} ${minutes}${MINS}`;
-      break;
     default:
       return '';
-      break;
   }
 }
 
-export { capitalizeFirstLetter, ButtonsTitles, getRandomNum, getUniqueID, getRandomArrayElement, generateRandomDate, getTimeDiff, getDuration, humanizeEventDate, humanizeDateAttribute };
+export { capitalizeFirstLetter, ButtonTitle, getRandomNum, getUniqueID, getRandomArrayElement, generateRandomDate, getTimeDiff, getDuration, humanizeEventDate, humanizeDateAttribute };

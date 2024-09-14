@@ -1,15 +1,12 @@
 import { createElement } from '../../render.js';
-import { capitalizeFirstLetter, getRandomArrayElement, getTimeDiff, getDuration, humanizeEventDate, humanizeDateAttribute } from '../../utils/utils.js';
+import { capitalizeFirstLetter, getRandomArrayElement, getTimeDiff, getDuration, humanizeDateAttribute } from '../../utils/utils.js';
 import { points, offers } from '../../mock/mock-point.js';
-import { eventPoints } from '../../mock/mock-point.js';
-
 
 const destinationPointName = (point) => {
   const destinationPoint = points.find((item) => item.id === point.destination);
 
   return destinationPoint.name;
 };
-console.log(createPointTemplate(eventPoints[0]));
 
 function createPointTemplate(eventPoint) {
   const { type, basePrice, date_from: dateFrom, date_to: dateTo } = eventPoint;
