@@ -1,20 +1,31 @@
-import FormCreateView from '../view/form-create-view/form-create-view.js';
-import FormEditView from '../view/form-edit-view/form-edit-view.js';
-import PointView from '../view/point-view/point-view.js';
-import { render, RenderPosition } from '../render.js';
+import {render} from '../render';
 
-export default class MainPresenter {
+import {pointFormButtonValue} from '../view/point-form-view/point-form-components/point-form-data';
 
-  constructor({ container }) {
-    this.container = container;
+import {SortingView} from '../view/sorting-view/sorting-view';
+import {PointFormView} from '../view/point-form-view/point-form-view';
+import {RoutePointView} from '../view/route-point-view/route-point-view';
+import {RoutePointsContainer} from '../view/route-point-view/route-points-container/route-points-container';
+
+export class MainPresenter {
+  sortingComponent = new SortingView();
+  editFormComponent = new PointFormView(pointFormButtonValue.Edit);
+  addFormComponent = new PointFormView(pointFormButtonValue.Add);
+  routePointsContainer = new RoutePointsContainer();
+
+  constructor({mainContainer}) {
+    this.mainContainer = mainContainer;
   }
 
   init() {
-    render(new FormEditView(), this.container, RenderPosition.BEFOREEND);
-    render(new FormCreateView(), this.container, RenderPosition.BEFOREEND);
-    for (let i = 0; i < 3; i++) {
-      render(new PointView(), this.container, RenderPosition.BEFOREEND);
+    render(this.sortingComponent, this.mainContainer);
+    render(this.editFormComponent, this.mainContainer);
+    render(this.addFormComponent, this.mainContainer);
+    render(this.routePointsContainer, this.mainContainer);
+    for (let i = 0; i < 3; i++){
+      render(new RoutePointView(), this.routePointsContainer.getElement());
     }
   }
 }
+
 
